@@ -1,28 +1,29 @@
-let arr = [];
-function createObj(name, phase, gender)
+let object_roster = [];
+function convert_roster_format(roster)
 {
-  arr.push({
-    name : name,
-    phase : phase,
-    gender : gender
-  })
-}
-
-createObj("Akbar", 1, "male");
-createObj("Icha", 1, "female");
-createObj("Adhit", 2, "male");
-
-function getData(name)
-{
-  for (let i = 0; i < arr.length; i++)
+  for (let i = 1; i < roster.length; i++)
   {
-    if (arr[i].name === name)
+    let obj = {};
+    for (let j = 0; j < roster[0].length; j++)
     {
-      return arr[i];
+      obj[roster[0][j]] = roster[i][j];
     }
+    object_roster.push(obj);
   }
-  return 0;
 }
 
 
-console.log(getData("Icha"));
+
+let roster = [
+  ["Number", "Name", "Position", "Points per Game"],
+  [12, "Joe Schmo", "Center", [14, 32, 7, 0, 23]],
+  [9, "Ms. Buckets", "Point Guard", [0, 30, 16, 0, 25]],
+  [31, "Harvey Kay", "Shooting Guard", [0, 30, 16, 0, 25]],
+  [7, "Sally Talls", "Power Forward", [18, 29, 26, 31, 19]],
+  [22, "MK DiBoux", "Small Forward", [11, 0, 23, 17, 0]]
+]
+
+
+convert_roster_format(roster);
+
+console.log(object_roster);
