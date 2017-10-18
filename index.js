@@ -18,5 +18,8 @@ const convertRosterFormat=(roster)=>{
     }
     return hasil;
 }
+const objectRoster=convertRosterFormat(roster);
 
 console.log(convertRosterFormat(roster));
+console.log(objectRoster[2]);
+console.log(objectRoster[0]["Name"] == "Joe Schmo");
