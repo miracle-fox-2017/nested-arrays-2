@@ -1,9 +1,9 @@
 var student =[
   ['Nama','Umur','Email','Nomor Telepon & Hp'],
-  ['Doel',19,'doel@anaksekolah.an',[021345,08179829]],
-  ['Atun',21,'Atun@tanjidor.com',[021911,08978]],
-  ['Zaenab',24,'Zaenab@bukansarah.com',[0217788,08278]],
-  ['Mandra',21,'Mandra@bibirsexy.com',[0219878,088278]],
+  ['Doel',19,'doel@anaksekolah.an',[21345,9997778179829]],
+  ['Atun',21,'Atun@tanjidor.com',[21911,775328978]],
+  ['Zaenab',24,'Zaenab@bukansarah.com',[35217788,748278]],
+  ['Mandra',21,'Mandra@bibirsexy.com',[56219878,97888278]],
 ]
 
 
@@ -11,7 +11,7 @@ function convertData(arr){
 let tampung =[]
 
 // console.log(student[0].length)
-for(let i=1;i<arr[0].length;i++){
+for(let i=1;i<arr.length;i++){
 let obj={}
   obj[arr[0][0]]= arr[i][0]
   obj[arr[0][1]]= arr[i][1]
